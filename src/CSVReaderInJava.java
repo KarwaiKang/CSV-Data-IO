@@ -9,7 +9,7 @@ import java.util.List;
 
 public class CSVReaderInJava {
     public static void main(String[] arg) {
-        List<Book> books = readBooksFromCSV("books.txt");
+        List<Book> books = readBooksFromCSV("src/books.txt");
 
         for (Book b : books)
             System.out.println(b);
@@ -18,7 +18,6 @@ public class CSVReaderInJava {
     private static List<Book> readBooksFromCSV(String fileName) {
         List<Book> books = new ArrayList<>();
         Path pathToFile = Paths.get(fileName);
-        System.out.println(pathToFile);
 
         try (BufferedReader br = Files.newBufferedReader(pathToFile, StandardCharsets.US_ASCII)) {
             String line = br.readLine();

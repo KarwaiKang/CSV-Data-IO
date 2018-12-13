@@ -33,6 +33,6 @@ public class Book {
     }
 
     public String toString() {
-        return name + " by " + author + ". Costs " + price;
+        return name + " by " + author + ". Costs " + price + ".";
     }
 }
